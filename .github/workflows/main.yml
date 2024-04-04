@@ -35,9 +35,17 @@ jobs:
         run: |
           pip install pytube
 
-      - name: Install AIDL
+      - name: Install build-essential
         run: |
           sudo apt-get update
+          sudo apt-get install build-essential
+
+      - name: Install libstdc++6
+        run: |
+          sudo apt-get install libstdc++6
+
+      - name: Install AIDL
+        run: |
           sudo apt-get install aidl
 
       - name: Build APK
